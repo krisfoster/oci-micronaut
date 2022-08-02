@@ -137,7 +137,7 @@ resource "helm_release" "ingress_nginx" {
     type  = "string"
   }
 
-  timeout = 1800 # workaround to wait the node be active for other charts
+  timeout = 3600 # workaround to wait the node be active for other charts
 
   depends_on = [kubernetes_deployment.cluster_autoscaler_deployment]
 
